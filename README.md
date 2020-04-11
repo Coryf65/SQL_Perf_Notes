@@ -14,6 +14,18 @@ The following info was documented from [Linkedin Learning - SQL Performance for 
 
 - Read plans from RIGHT TO LEFT and TOP TO BOTTOM
 
+- All Operators Cost something
+
+Examples:
+
+SET STATISTICS IO, The number of IO's sql server will do to complete our query. Logical reads from memory and Physical reads by disk
+
+TIME ON, actual execution time 
+
+*Before the query select*
+```tsql
+SET STATISTICS IO, TIME ON
+```
 
 ## What NOT to DO with a SQL Server
 
