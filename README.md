@@ -33,5 +33,24 @@ TIME ON, actual execution time
 SET STATISTICS IO, TIME ON
 ```
 
+### Key Lookups
+
+- Generally we would want to remove clustered lookups
+
+### Nested Loops vs Hash Joins
+
+- Hash Joins are a table that gets created in memory to match values together, and bring them together for your join operation.
+
+- Hash joins are very efficient on a large set of data.
+
+- They're less efficient on a very small set of data. Because the process of creating the hash table in memory is rather expensive, relative to a very small number of rows.
+
+*you could hint the join types, COULD IMPACT NEGATIVELY*
+
+- The differed join selection will change from nested loops to hash tables and vice versa based on statistics 
+    
+    that are available from within the query and this is part of a new set of features in SQL Server 2017 called Automatic Tuning.
+
+
 ## What NOT to DO with a SQL Server
 
