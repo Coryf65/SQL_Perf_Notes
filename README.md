@@ -106,10 +106,21 @@ INNER HASH JOIN Person p ON p.ID = User.UserID
 
 - Cursors are bad
 
+- While loops === cursors
+
+- Do the best you can to avoid Cusors    
 
 Set Operations | Cursor Logic
 -------------- | ------------
 Performs much better in general | Operates row by row
 Scales *way better* | Uses more memory
 Easier to read and troubleshoot | Creates more Blocking
+
+### What to do instead ?
+
+- try to do JOINS
+
+- try to create a temp table
+
+- create new tables to join
 
