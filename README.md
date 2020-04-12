@@ -28,10 +28,10 @@ SET STATISTICS IO, The number of IO's sql server will do to complete our query. 
 
 TIME ON, actual execution time 
 
-    *Before the query select*
-    ```tsql
-    SET STATISTICS IO, TIME ON
-    ```
+*Before the query select*
+```tsql
+SET STATISTICS IO, TIME ON
+```
 
 ### Key Lookups
 
@@ -47,15 +47,15 @@ TIME ON, actual execution time
 
 *you could hint the join types, COULD IMPACT NEGATIVELY*
 
-    example: letting the sql server decide
-    ```tsql
-    INNER JOIN Person p ON p.ID = User.UserID
-    ```
+example: letting the sql server decide
+```tsql
+INNER JOIN Person p ON p.ID = User.UserID
+```
 
-    example: Hinting to use a hash join
-    ```tsql
-    INNER HASH JOIN Person p ON p.ID = User.UserID
-    ```
+example: Hinting to use a hash join
+```tsql
+INNER HASH JOIN Person p ON p.ID = User.UserID
+```
 
 - The differed join selection will change from nested loops to hash tables and vice versa based on statistics 
     
