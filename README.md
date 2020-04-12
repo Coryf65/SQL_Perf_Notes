@@ -28,10 +28,10 @@ SET STATISTICS IO, The number of IO's sql server will do to complete our query. 
 
 TIME ON, actual execution time 
 
-*Before the query select*
-```tsql
-SET STATISTICS IO, TIME ON
-```
+    *Before the query select*
+    ```tsql
+    SET STATISTICS IO, TIME ON
+    ```
 
 ### Key Lookups
 
@@ -47,9 +47,26 @@ SET STATISTICS IO, TIME ON
 
 *you could hint the join types, COULD IMPACT NEGATIVELY*
 
+    example: letting the sql server decide
+    ```tsql
+    INNER JOIN Person p ON p.ID = User.UserID
+    ```
+
+    example: Hinting to use a hash join
+    ```tsql
+    INNER HASH JOIN Person p ON p.ID = User.UserID
+    ```
+
 - The differed join selection will change from nested loops to hash tables and vice versa based on statistics 
     
     that are available from within the query and this is part of a new set of features in SQL Server 2017 called Automatic Tuning.
+
+
+### Query Store
+
+
+### Stored Procedures vs Dynamic SQL
+
 
 
 ## What NOT to DO with a SQL Server
