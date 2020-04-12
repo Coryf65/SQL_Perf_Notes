@@ -64,6 +64,9 @@ INNER HASH JOIN Person p ON p.ID = User.UserID
 
 ### Query Store
 
+- The Query Store is, simply put, a data recorder for SQL Server so, it records two main sets of data as its inputs, 
+    and that's one-time compilation information so, the inputs that went into generating a query execution plan 
+    for your query, those are captured, and then it generates run-time statistics, so how long your query took to run.
 
 ### Stored Procedures vs Dynamic SQL
 
