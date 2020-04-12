@@ -64,13 +64,29 @@ INNER HASH JOIN Person p ON p.ID = User.UserID
 
 ### Query Store
 
+- Not enabled by default, can enable using the model database
+
 - The Query Store is, simply put, a data recorder for SQL Server so, it records two main sets of data as its inputs, 
     and that's one-time compilation information so, the inputs that went into generating a query execution plan 
     for your query, those are captured, and then it generates run-time statistics, so how long your query took to run.
 
 ### Stored Procedures vs Dynamic SQL
 
+- Stored Procedures
 
+    - Code thats built into the database and schema
+
+    - our plans are cached, which could have better performance
+
+    - sp_exec
+
+    - will out perform in most cases
+
+- Dynamic SQL
+
+    - Good for Administrative tasks
+
+    - examples: automation purposes, creating backups
 
 ## What NOT to DO with a SQL Server
 
