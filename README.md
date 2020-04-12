@@ -82,11 +82,34 @@ INNER HASH JOIN Person p ON p.ID = User.UserID
 
     - will out perform in most cases
 
+    - **NOT** Stored as compiled code they are compiled on runtime
+
 - Dynamic SQL
 
     - Good for Administrative tasks
 
     - examples: automation purposes, creating backups
 
+### Missing Index Warnings
+
+- more of an Art than a Science
+
+- a missing index warning is for the specific query, does not correalte to the rest of your workload
+
+- Indexs do have a cost, can cause Write amplification
+
+- Index effectively 
+
+- *should* look at the missing index recommendations as a whole.
+
 ## What NOT to DO with a SQL Server
+
+- Cursors are bad
+
+
+Set Operations | Cursor Logic
+-------------- | ------------
+Performs much better in general | Operates row by row
+Scales *way better* | Uses more memory
+Easier to read and troubleshoot | Creates more Blocking
 
