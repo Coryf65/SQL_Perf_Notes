@@ -118,9 +118,18 @@ Easier to read and troubleshoot | Creates more Blocking
 
 ### What to do instead ?
 
-- try to do JOINS
+- try to do JOINS they are your friends!
 
 - try to create a temp table
 
 - create new tables to join
 
+- Table-valued Function and Parameters
+
+- Other Options
+
+    - Consider doing things at Application tier
+
+    - *After*, filtering down to the narrow set of data you need to use
+
+    - Keep in mind Row-By-Row operations are always a bad thing
