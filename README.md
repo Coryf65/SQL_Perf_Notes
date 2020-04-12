@@ -133,3 +133,20 @@ Easier to read and troubleshoot | Creates more Blocking
     - *After*, filtering down to the narrow set of data you need to use
 
     - Keep in mind Row-By-Row operations are always a bad thing
+
+
+## Scalar and User Defined Functions are Expensive
+
+- Single threaded Operations
+
+- Interpreted for every call
+
+- challenging to troubleshoot
+
+### What to Do instead ?
+
+    - CLR Functions (security risks)
+
+    - Put code inline
+
+    - Table-Valued Functions (*Best Option*)
