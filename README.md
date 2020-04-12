@@ -24,9 +24,9 @@ The following info was documented from [Linkedin Learning - SQL Performance for 
 
 Examples:
 
-SET STATISTICS IO, The number of IO's sql server will do to complete our query. Logical reads from memory and Physical reads by disk
+**SET STATISTICS IO**, The number of IO's sql server will do to complete our query. Logical reads from memory and Physical reads by disk
 
-TIME ON, actual execution time 
+**TIME ON**, actual execution time 
 
 *Before the query select*
 ```tsql
