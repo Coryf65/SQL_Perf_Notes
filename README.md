@@ -145,8 +145,8 @@ Easier to read and troubleshoot | Creates more Blocking
 
 ### What to Do instead ?
 
-    - CLR Functions (security risks)
+- CLR Functions (security risks)
 
-    - Put code inline
+- Put code inline
 
-    - Table-Valued Functions (*Best Option*)
+- Table-Valued Functions (*Best Option*)
